@@ -81,6 +81,7 @@ pub struct BulletState {
 pub struct DeadPlayer {
     pub respawn: SystemTime,
     pub player: PlayerState,
+    pub killer: u32
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]

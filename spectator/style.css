@@ -1,0 +1,89 @@
+html {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+}
+
+body {
+  width: 90dvw;
+  height: 90dvh;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1.4fr 0.6fr;
+  grid-template-columns: 1.5fr 0.5fr;
+  gap: 24px 24px;
+  grid-template-areas:
+    "playground leaderboard"
+    "playground killfeed";
+}
+
+#playground {
+  grid-area: playground;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#canvas {
+  margin-left: auto;
+}
+#scoreboard-container {
+  grid-area: leaderboard;
+  font-size: 16px;
+}
+#killfeed-container {
+  grid-area: killfeed;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+#killfeed {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#scoreboard-container {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+#scoreboard-container::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+#scoreboard .rank::before {
+  content: "#";
+}
+#scoreboard .score {
+  text-align: right;
+}
+#scoreboard .rank {
+  padding-right: 10px;
+}
+
+#scoreboard .name {
+  min-width: 150px;
+  padding-right: 10px;
+}
+
+#scoreboard .rank-1 * {
+  color: #ff6b6b;
+}
+
+#scoreboard .rank-2 * {
+  color: #1dd1a1;
+}
+
+#scoreboard .rank-3 * {
+  color: #48dbfb;
+}
+
+.heading b {
+  display: inline-block;
+  padding: 2px 4px;
+  border: 1px solid white;
+}

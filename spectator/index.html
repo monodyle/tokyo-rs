@@ -1,55 +1,134 @@
 <html>
-    <head>
-        <style>
-            html, body, div, span, applet, object, iframe,
-            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-            a, abbr, acronym, address, big, cite, code,
-            del, dfn, em, img, ins, kbd, q, s, samp,
-            small, strike, strong, sub, sup, tt, var,
-            b, u, i, center,
-            dl, dt, dd, ol, ul, li,
-            fieldset, form, label, legend,
-            table, caption, tbody, tfoot, thead, tr, th, td,
-            article, aside, canvas, details, embed,
-            figure, figcaption, footer, header, hgroup,
-            menu, nav, output, ruby, section, summary,
-            time, mark, audio, video {
-                margin: 0;
-                padding: 0;
-                border: 0;
-                font-size: 100%;
-                font: inherit;
-                vertical-align: baseline;
-                overflow:hidden;
-                font-family: monospace;
-                color: white;
-            }
 
-            #websocket-status {
-                border: 1px solid orange;
-                padding: 3px;
-                display: block;
-                position: absolute;
-                bottom: 10px;
-                right: 10px;
-                opacity: 0.5;
-            }
+<head>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            overflow: hidden;
+            font-family: monospace;
+            color: white;
+        }
+
+        #websocket-status {
+            border: 1px solid orange;
+            padding: 3px;
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            opacity: 0.5;
+        }
     </style>
-    <link rel="stylesheet" href="scoreboard.css" />
-    </head>
-    <body style="background: #000;">
-        <canvas id="canvas" width="1600" height="1000" style="border:1px solid #000000; background: #000;">
-        </canvas>
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-        <div id="scoreboard-container">
-          <table id="scoreboard">
-          </table>
+<body style="background: #000;">
+    <div id="playground">
+        <canvas id="canvas" width="1600" height="1000"></canvas>
+    </div>
+
+    <div id="scoreboard-container">
+        <table id="scoreboard">
+        </table>
+    </div>
+
+    <div id="killfeed-container">
+        <div class="heading"><b>Killfeed</b></div>
+        <div id="killfeed">
+            <div id="anchor"></div>
         </div>
+    </div>
 
-        <div id="websocket-status">
-            disconnected
-        </div>
+    <div id="websocket-status">
+        disconnected
+    </div>
 
-        <script src="index.js"></script>
-    </body>
+    <script src="index.js"></script>
+</body>
+
 </html>
